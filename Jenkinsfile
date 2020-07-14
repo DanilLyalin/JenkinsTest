@@ -10,13 +10,13 @@ pipeline {
                 withEnv(["HOME=${env.WORKSPACE}"]) {
                     sh 'pip3 install --user robotframework'
                     sh 'python3 --version'
-                    sh 'robot --version'
+                    sh 'python3 -m robot --version'
                 }
             }
         }
         stage('Test') {
         	steps {
-                sh 'robot tests.robot'
+                sh 'python3 -m robot tests.robot'
             }
         }
     }
