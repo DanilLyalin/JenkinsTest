@@ -10,7 +10,6 @@ pipeline {
                 withEnv(["HOME=${env.WORKSPACE}"]) {
                     sh 'pip3 install --user robotframework'
                     sh 'python3 --version'
-                    sh 'python3 ./.local/lib/python3.5/site-packages/robot --version'
                 }
             }
         }
