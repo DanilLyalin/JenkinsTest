@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200714 20:27:42.355" generator="Robot 3.2.1 (Python 2.7.17 on linux2)">
+<suite source="/home/danil/DELL_PRACTICE_2020/ci-cd/JenkinsTest/tests.robot" id="s1" name="Tests">
+<test id="s1-t1" name="Addition">
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>python3</arg>
+<arg>calc.py</arg>
+<arg>+</arg>
+<arg>2</arg>
+<arg>2</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200714 20:27:42.372" level="INFO">Starting process:
+python3 calc.py + 2 2</msg>
+<msg timestamp="20200714 20:27:42.374" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200714 20:27:42.389" level="INFO">Process completed.</msg>
+<msg timestamp="20200714 20:27:42.390" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200714 20:27:42.390" starttime="20200714 20:27:42.372"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>2 + 2</arg>
+</arguments>
+<status status="PASS" endtime="20200714 20:27:42.390" starttime="20200714 20:27:42.390"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>4.0000000000</arg>
+</arguments>
+<status status="PASS" endtime="20200714 20:27:42.391" starttime="20200714 20:27:42.390"></status>
+</kw>
+<status status="PASS" endtime="20200714 20:27:42.391" critical="yes" starttime="20200714 20:27:42.371"></status>
+</test>
+<test id="s1-t2" name="Subtraction">
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>python3</arg>
+<arg>calc.py</arg>
+<arg>-</arg>
+<arg>10.5123213</arg>
+<arg>6.5123213</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200714 20:27:42.392" level="INFO">Starting process:
+python3 calc.py - 10.5123213 6.5123213</msg>
+<msg timestamp="20200714 20:27:42.393" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200714 20:27:42.410" level="INFO">Process completed.</msg>
+<msg timestamp="20200714 20:27:42.411" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200714 20:27:42.411" starttime="20200714 20:27:42.392"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>10.5123213 - 6.5123213</arg>
+</arguments>
+<status status="PASS" endtime="20200714 20:27:42.411" starttime="20200714 20:27:42.411"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>4.0000000000</arg>
+</arguments>
+<status status="PASS" endtime="20200714 20:27:42.412" starttime="20200714 20:27:42.411"></status>
+</kw>
+<status status="PASS" endtime="20200714 20:27:42.412" critical="yes" starttime="20200714 20:27:42.391"></status>
+</test>
+<test id="s1-t3" name="Multiplication">
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>python3</arg>
+<arg>calc.py</arg>
+<arg>*</arg>
+<arg>1.00000</arg>
+<arg>4.00000</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200714 20:27:42.413" level="INFO">Starting process:
+python3 calc.py * 1.00000 4.00000</msg>
+<msg timestamp="20200714 20:27:42.415" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200714 20:27:42.431" level="INFO">Process completed.</msg>
+<msg timestamp="20200714 20:27:42.431" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200714 20:27:42.431" starttime="20200714 20:27:42.412"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>1.00000 * 4.00000</arg>
+</arguments>
+<status status="PASS" endtime="20200714 20:27:42.432" starttime="20200714 20:27:42.432"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>4.0000000000</arg>
+</arguments>
+<status status="PASS" endtime="20200714 20:27:42.432" starttime="20200714 20:27:42.432"></status>
+</kw>
+<status status="PASS" endtime="20200714 20:27:42.432" critical="yes" starttime="20200714 20:27:42.412"></status>
+</test>
+<test id="s1-t4" name="Division">
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>python3</arg>
+<arg>calc.py</arg>
+<arg>/</arg>
+<arg>8.8888</arg>
+<arg>2</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200714 20:27:42.433" level="INFO">Starting process:
+python3 calc.py / 8.8888 2</msg>
+<msg timestamp="20200714 20:27:42.435" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200714 20:27:42.451" level="INFO">Process completed.</msg>
+<msg timestamp="20200714 20:27:42.452" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200714 20:27:42.452" starttime="20200714 20:27:42.433"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>8.8888 / 2</arg>
+</arguments>
+<status status="PASS" endtime="20200714 20:27:42.452" starttime="20200714 20:27:42.452"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>4.4444000000</arg>
+</arguments>
+<status status="PASS" endtime="20200714 20:27:42.453" starttime="20200714 20:27:42.452"></status>
+</kw>
+<status status="PASS" endtime="20200714 20:27:42.453" critical="yes" starttime="20200714 20:27:42.433"></status>
+</test>
+<test id="s1-t5" name="Division by zero">
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>python3</arg>
+<arg>calc.py</arg>
+<arg>/</arg>
+<arg>4.44444</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200714 20:27:42.454" level="INFO">Starting process:
+python3 calc.py / 4.44444 0</msg>
+<msg timestamp="20200714 20:27:42.456" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200714 20:27:42.472" level="INFO">Process completed.</msg>
+<msg timestamp="20200714 20:27:42.472" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" endtime="20200714 20:27:42.472" starttime="20200714 20:27:42.454"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>4.44444 / 0</arg>
+</arguments>
+<status status="PASS" endtime="20200714 20:27:42.473" starttime="20200714 20:27:42.473"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${result.stdout}</arg>
+<arg>Деление на ноль!</arg>
+</arguments>
+<status status="PASS" endtime="20200714 20:27:42.473" starttime="20200714 20:27:42.473"></status>
+</kw>
+<status status="PASS" endtime="20200714 20:27:42.474" critical="yes" starttime="20200714 20:27:42.453"></status>
+</test>
+<status status="PASS" endtime="20200714 20:27:42.474" starttime="20200714 20:27:42.356"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="5">Critical Tests</stat>
+<stat fail="0" pass="5">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Tests" pass="5">Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
