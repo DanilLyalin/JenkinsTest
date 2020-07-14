@@ -13,9 +13,6 @@ else:
 		elif op == '*':
 			print("%.10f" % (x*y))
 		elif op == '/':
-			if y == 0:
-				print("Деление на ноль!")
-				exit()
 			print("%.10f" % (x/y))
 	else:
 		print("Неверный параметр!")
