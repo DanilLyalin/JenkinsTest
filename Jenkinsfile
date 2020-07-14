@@ -1,15 +1,10 @@
+Jenkinsfile (Declarative Pipeline)
 pipeline {
-    agent none 
+    agent { docker { image 'python:3.5.1' } }
     stages {
-        stage('Build') { 
-            agent {
-                docker {
-                    image 'python:3.6.9' 
-                }
-            }
+        stage('build') {
             steps {
-                sh 'python -m py_compile sources/calc.py' 
-                stash(name: 'compiled-results', includes: 'sources/*.py*') 
+                sh 'python --version'
             }
         }
     }
