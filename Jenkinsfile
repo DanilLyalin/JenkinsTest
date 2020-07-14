@@ -3,7 +3,12 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'python --version'
+                sh 'pip3 install robotframework'
+            }
+        }
+        stage('test') {
+            steps {
+                sh 'robot tests.robot'
             }
         }
     }
